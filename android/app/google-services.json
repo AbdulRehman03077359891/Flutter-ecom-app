@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "593293559977",
+    "project_id": "humanlibrary-1c35f",
+    "storage_bucket": "humanlibrary-1c35f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593293559977:android:8f66de39d44a15932c41b8",
+        "android_client_info": {
+          "package_name": "com.example.my_ecom_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdmugOeS8mphdf4CpQZKk89YIm5PXoIMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
