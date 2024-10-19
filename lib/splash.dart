@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_ecom_app/FireBaseScreen/SignIn.dart';
-import 'package:my_ecom_app/admin/adminScreen.dart';
+import 'package:my_ecom_app/FireBaseScreen/sign_in.dart';
+import 'package:my_ecom_app/admin/admin_dashboard.dart';
+import 'package:my_ecom_app/business/business_dashboard.dart';
+import 'package:my_ecom_app/normUsers/user_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -31,25 +33,24 @@ class _SplashScreenState extends State<SplashScreen> {
       // Get.offAll(HumanLibrary());
       if (userType == "NormUsers") {
         // Navigator.of(context).push(MaterialPageRoute(builder: (context) => HumanLibrary(userType: userType!,userName: prefs.getString("name"),userEmail: prefs.getString("email"),profilePicture: prefs.getString("imageUrl"),)));
-        Get.offAll(() => AdminScreen(
-              userType: userType,
-              userName: prefs.getString("name"),
-              userEmail: prefs.getString("email"),
-              profilePicture: prefs.getString("imageUrl"),
+        Get.offAll(() => UserScreen(
+          userUid: prefs.getString("uid").toString(),
+              userName: prefs.getString("name").toString(),
+              userEmail: prefs.getString("email").toString(),
+              profilePicture: prefs.getString("imageUrl").toString(),
             ));
       } else if (userType == "BusinessUsers") {
-        Get.offAll(() => AdminScreen(
-              userType: userType,
-              userName: prefs.getString("name"),
-              userEmail: prefs.getString("email"),
-              profilePicture: prefs.getString("imageUrl"),
+        Get.offAll(() => BusinessScreen(
+          userUid: prefs.getString("uid").toString(),
+              userName: prefs.getString("name").toString(),
+              userEmail: prefs.getString("email").toString(),
+              profilePicture: prefs.getString("imageUrl").toString(),
             ));
       } else if (userType == "admin") {
         Get.offAll(() => AdminScreen(
-              userType: userType,
-              userName: prefs.getString("name"),
-              userEmail: prefs.getString("email"),
-              profilePicture: prefs.getString("imageUrl"),
+              userName: prefs.getString("name").toString(),
+              userEmail: prefs.getString("email").toString(),
+              profilePicture: prefs.getString("imageUrl").toString(),
             ));
       }
     } else {

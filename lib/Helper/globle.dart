@@ -1,0 +1,2 @@
+var conversationId = "";
+var userUid = "";
